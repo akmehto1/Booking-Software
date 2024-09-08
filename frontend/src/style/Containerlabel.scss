@@ -1,0 +1,35 @@
+.container-label {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  label {
+    display: inline-block;
+    color: #334363;
+    font-weight: 500;
+    line-height: 19px;
+    margin-bottom: 4px;
+    font-family: "Inter", sans-serif;
+    
+    span{
+        color:red;
+    }
+  }
+
+  .input-box {
+    height: 48px;
+
+    input {
+      font-size: 1.1em;
+      width: 100%;
+      height: 48px;
+      line-height: 48px;
+      border-radius: 7px;
+      box-shadow: none;
+      padding: 5px 5px;
+      border: 1px solid #ffffff;
+      -webkit-transition: border 0.15s;
+      transition: border 0.15s;
+      overflow: hidden;
+    }
+  }
+}

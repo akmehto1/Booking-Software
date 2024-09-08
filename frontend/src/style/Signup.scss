@@ -1,0 +1,94 @@
+$main-background-color: #f4f6fa;
+
+.sections {
+  display: flex;
+  .section1 {
+    width: 50%;
+    background-color: bisque;
+    height: 100vh;
+  }
+  .section2 {
+    background-color: $main-background-color;
+    padding: 60px 65px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      font-size: 3em;
+      width: 100%;
+      font-size: 24px;
+    line-height: 36px;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: center;
+    margin: 32px;
+
+    }
+
+    .signup-account-wrapper{
+      display: flex;
+      flex-direction: column;
+      gap:10px;
+
+      .name-section{
+        display: flex;
+        gap:5px;  
+      }
+
+      button{
+        height:45px;
+        background-color: #005aee;
+        color: #fff;
+            height: 48px;
+    font-size: 15px;
+    line-height: 24px;
+    padding: 0 24px;
+    --spinner-line-color: #FFFFFF;
+    --spinner-container-width: 24px;
+    --spinner-container-height: 24px;
+    font-weight: 500;
+    border-radius: 11px;
+    outline: none;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    justify-content: center;
+    -webkit-transition: background .15s;
+    transition: background .15s;
+    border-style: none;
+    cursor: pointer;
+    font-family: Inter, serif;
+      }
+
+    .google-sign{
+      background-color: red;
+    }
+    }
+
+
+    h3{
+      margin-top: 24px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 24px;
+    font-family: "Inter", sans-serif;
+    
+    Link{
+      color: #005aee;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    }
+  }
+}
+
+
+
+
