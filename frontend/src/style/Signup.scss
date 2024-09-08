@@ -1,11 +1,60 @@
 $main-background-color: #f4f6fa;
+$heading-color:#00124F;
+$Primary-Text: #16423C;
 
 .sections {
   display: flex;
   .section1 {
     width: 50%;
-    background-color: bisque;
+    background-color:$main-background-color;
     height: 100vh;
+
+     .heading-title{
+      display:flex;
+      align-items: center;
+    
+          img{
+            width:100px;
+          }
+
+          h2{
+            font-size:2em;
+            font-family: "Protest Guerrilla", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            color:$heading-color;
+          }
+     }
+
+     .title{
+      display: flex;
+      gap:10px;
+      font-family: "Bebas Neue", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      letter-spacing: .1em;
+      font-size: 45px;
+     color:$Primary-Text;
+      transform: translateX(50px);
+      opacity: 0;
+      .booking{
+        
+        display: flex;
+      }
+
+      .software{
+        
+        display:flex;
+       
+        
+      }
+     }
+
+    img{
+      width:100%;
+      
+      
+    }
   }
   .section2 {
     background-color: $main-background-color;
@@ -20,75 +69,69 @@ $main-background-color: #f4f6fa;
       font-size: 3em;
       width: 100%;
       font-size: 24px;
-    line-height: 36px;
-    font-family: "Inter", sans-serif;
-    text-align: center;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 36px;
-    text-align: center;
-    margin: 32px;
-
+      line-height: 36px;
+      font-family: "Inter", sans-serif;
+      text-align: center;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 36px;
+      text-align: center;
+      margin: 32px;
     }
 
-    .signup-account-wrapper{
+    .signup-account-wrapper {
       display: flex;
       flex-direction: column;
-      gap:10px;
+      gap: 10px;
 
-      .name-section{
+      .name-section {
         display: flex;
-        gap:5px;  
+        gap: 5px;
       }
 
-      button{
-        height:45px;
+      button {
+        height: 45px;
         background-color: #005aee;
         color: #fff;
-            height: 48px;
-    font-size: 15px;
-    line-height: 24px;
-    padding: 0 24px;
-    --spinner-line-color: #FFFFFF;
-    --spinner-container-width: 24px;
-    --spinner-container-height: 24px;
-    font-weight: 500;
-    border-radius: 11px;
-    outline: none;
-    display: inline-flex;
-    align-items: center;
-    white-space: nowrap;
-    justify-content: center;
-    -webkit-transition: background .15s;
-    transition: background .15s;
-    border-style: none;
-    cursor: pointer;
-    font-family: Inter, serif;
+        height: 48px;
+        font-size: 15px;
+        line-height: 24px;
+        padding: 0 24px;
+        --spinner-line-color: #ffffff;
+        --spinner-container-width: 24px;
+        --spinner-container-height: 24px;
+        font-weight: 500;
+        border-radius: 11px;
+        outline: none;
+        display: inline-flex;
+        align-items: center;
+        white-space: nowrap;
+        justify-content: center;
+        -webkit-transition: background 0.15s;
+        transition: background 0.15s;
+        border-style: none;
+        cursor: pointer;
+        font-family: Inter, serif;
       }
 
-    .google-sign{
-      background-color: red;
-    }
+      .google-sign {
+        background-color: #EA4335;
+      }
     }
 
-
-    h3{
+    h3 {
       margin-top: 24px;
-    text-align: center;
-    font-size: 15px;
-    line-height: 24px;
-    font-family: "Inter", sans-serif;
-    
-    Link{
-      color: #005aee;
-      font-weight: 500;
-      cursor: pointer;
-      text-decoration: none;
-    }
+      text-align: center;
+      font-size: 15px;
+      line-height: 24px;
+      font-family: "Inter", sans-serif;
+
+      Link {
+        color: #005aee;
+        font-weight: 500;
+        cursor: pointer;
+        text-decoration: none;
+      }
     }
   }
 }
-
-
-
-
