@@ -1,3 +1,7 @@
+$primary-color:#4083F2;
+$primary-color-dark:#2F4F7F;
+
+
 .container-label {
   display: flex;
   flex-direction: column;
@@ -30,6 +34,23 @@
       -webkit-transition: border 0.15s;
       transition: border 0.15s;
       overflow: hidden;
+      outline-color:$primary-color;
     }
   }
 }
+
+
+
+
+
+@media (max-width: 600px) {
+
+  .container-label{
+    display: flex;
+    width:100%;
+  }
+
+
+}
+
+

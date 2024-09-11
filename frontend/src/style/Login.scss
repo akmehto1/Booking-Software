@@ -1,0 +1,166 @@
+$main-background-color: #f4f6fa;
+$heading-color: #00124f;
+$Primary-Text: #16423c;
+
+// font use
+// font-family: "Protest Guerrilla", sans-serif;
+// font-family: "Bebas Neue", sans-serif;
+// font-family: "Inter", sans-serif;
+
+.sections {
+  display: flex;
+  .section1 {
+    width: 50%;
+    background-color: $main-background-color;
+
+    .heading-title {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 100px;
+      }
+
+      h2 {
+        font-size: 2em;
+        font-family: "Protest Guerrilla", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: $heading-color;
+      }
+    }
+
+    .title {
+      display: flex;
+      gap: 10px;
+      font-family: "Bebas Neue", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      letter-spacing: 0.1em;
+      font-size: 45px;
+      color: $Primary-Text;
+      transform: translateX(50px);
+      opacity: 0;
+      .booking {
+        display: flex;
+      }
+
+      .software {
+        display: flex;
+      }
+    }
+
+    .description {
+      font-size: 30px;
+      font-family: "inter";
+      padding: 20px 20px;
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+      font-weight: 600;
+      p:first-child {
+        word-spacing: 20px;
+      }
+    }
+
+    .main-logo {
+      width: 100%;
+      height: 450px;
+    }
+  }
+  .section2 {
+    background-color: $main-background-color;
+    padding: 40px 45px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      font-size: 3em;
+      width: 100%;
+      font-family: "Inter", sans-serif;
+      word-spacing: 5px;
+    }
+
+    .signup-account-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 70%;
+      .name-section {
+        display: flex;
+        gap: 5px;
+      }
+
+      button {
+        height: 45px;
+        background-color: #005aee;
+        color: #fff;
+        height: 48px;
+        font-size: 15px;
+        line-height: 24px;
+        padding: 0 24px;
+        --spinner-line-color: #ffffff;
+        --spinner-container-width: 24px;
+        --spinner-container-height: 24px;
+        font-weight: 500;
+        border-radius: 11px;
+        outline: none;
+        display: inline-flex;
+        align-items: center;
+        white-space: nowrap;
+        justify-content: center;
+        -webkit-transition: background 0.15s;
+        transition: background 0.15s;
+        border-style: none;
+        cursor: pointer;
+        font-family: Inter, serif;
+      }
+
+      .google-sign {
+        background-color: #ea4335;
+      }
+    }
+
+    h3 {
+      margin-top: 24px;
+      text-align: center;
+      font-size: 15px;
+      line-height: 24px;
+      font-family: "Inter", sans-serif;
+
+      Link {
+        color: #005aee;
+        font-weight: 500;
+        cursor: pointer;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: 600px) {
+
+  .sections{
+    
+    width:100%;
+
+  
+    
+    .section2{
+      width:100%;
+      height:100vh;
+      background-color: $main-background-color;
+    padding: 60px 65px;
+    width: 100%;
+    display:flex;
+    }
+
+  }
+
+
+}
