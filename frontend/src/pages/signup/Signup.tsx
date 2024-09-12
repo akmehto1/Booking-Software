@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
-import '../../style/Signup.scss'
+import './Signup.scss'
 import ContainerLabel from "../../components/Containerlabel";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import signupLogo from "../../assets/images/image_wrapper-B0BcvrsB.webp";
 import logo from "../../assets/images/logo.png";
 import gsap from "gsap";
 import { FaEye } from "react-icons/fa";
 import googleLogo from '../../assets/images/googleLogo.png';
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { signUpSave } from "../../redux/slices/signupSlice";
 
 interface FormState {
   firstName: string;
@@ -17,6 +20,12 @@ interface FormState {
 }
 
 export default function Signup() {
+
+  const dispatch = useDispatch()
+  const navigate=useNavigate();
+ 
+
+
   let [form, setForm] = useState<FormState>({
     firstName: "",
     lastName: "",
@@ -24,6 +33,14 @@ export default function Signup() {
     password: "",
     confirmPassword: "",
   });
+
+  const handleNavigate=()=>{
+    dispatch(signUpSave(form))
+    navigate('/bussines-signup')
+    console.log("bussiness");
+
+
+  }
   const [isSubmit, setIsSubmit] = useState<boolean>(false);
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
   const [isError, setIsError] = useState<boolean>(false);
@@ -69,6 +86,7 @@ export default function Signup() {
 
     form = { ...form, [e.target.id]: e.target.value };
     setForm(form);
+    console.log(form);
   };
 
   useEffect(() => {
@@ -122,17 +140,20 @@ export default function Signup() {
             <ContainerLabel
               hintText="First Name"
               label="First Name"
+               id="firstName"
               handleChange={handleChange}
             />
             <ContainerLabel
               hintText="Last Name"
               label="Last Name"
+               id="lastName"
               handleChange={handleChange}
             />
           </div>
           <ContainerLabel
             hintText="Email"
             label="Email"
+            id="email"
             handleChange={handleChange}
           />
           <div className="password-box">
@@ -205,7 +226,7 @@ export default function Signup() {
             </div>
           </div>
 
-          <button>Continue</button>
+          <button onClick={handleNavigate}>Continue</button>
           <button className="google-sign">Google++</button>
         </form>
         <h3>

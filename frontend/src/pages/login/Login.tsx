@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import '../style/Login.scss';
+import './Login.scss';
 
-import ContainerLabel from "../components/Containerlabel";
+import ContainerLabel from "../../components/Containerlabel";
 import { Link } from "react-router-dom";
-import signupLogo from "../assets/images/image_wrapper-B0BcvrsB.webp";
-import logo from "../assets/images/logo.png";
+import signupLogo from "../../assets/images/image_wrapper-B0BcvrsB.webp";
+import logo from "../../assets/images/logo.png";
 import gsap from "gsap";
 interface FormState {
   firstName: string;
