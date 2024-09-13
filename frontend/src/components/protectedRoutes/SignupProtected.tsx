@@ -4,7 +4,7 @@ import { Navigate, Outlet} from 'react-router-dom';
 import { RootState } from '../../redux/store'; // Adjust the import path as needed based on your project structure
 
 // Define the ProtectRoute component
-export default function ProtectRoute() {
+export default function ProtectRouteSignup() {
  
     
   // Use the useSelector hook with type safety

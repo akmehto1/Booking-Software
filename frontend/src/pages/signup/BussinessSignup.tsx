@@ -6,51 +6,47 @@ import bussinessImage from "../../assets/images/bussinessImage.png";
 import { LiaFlagUsaSolid } from "react-icons/lia";
 import { UseSelector } from "react-redux";
 import { signUp } from "../../redux/slices/signupSlice";
+import { FaCheckCircle } from "react-icons/fa";
+import { MdOutlineRadioButtonUnchecked } from "react-icons/md";
 export default function BussinessSignup() {
   const [bookingDomain, setBookingDomain] = useState<string>("booking");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setBookingDomain(e.target.value);
 
-    if(e.target.id==='email'){
+    if (e.target.id === "email") {
       console.log(e.target.value);
     }
     console.log("hello");
   };
 
-
   useEffect(() => {
-    gsap.to('.bussiness-image',{
-      z:0,
-      delay:2,
-      duration:2,
-      opacity:1
-    })
+    gsap.to(".bussiness-image", {
+      z: 0,
+      delay: 2,
+      duration: 2,
+      opacity: 1,
+    });
 
-    gsap.to('.bussiness-show',{
-      z:0,
-      delay:1.3,
-      opacity:1
-    })
-  
-    gsap.to('.bussiness-box',{
-      z:0,
-      delay:1,
-      opacity:1
-    })
+    gsap.to(".bussiness-show", {
+      z: 0,
+      delay: 1.3,
+      opacity: 1,
+    });
 
-    gsap.to(".left",{
-      z:0,
-      stagger: 0.1 ,
-      delay:1,
-      opacity:1
+    gsap.to(".bussiness-box", {
+      z: 0,
+      delay: 1,
+      opacity: 1,
+    });
 
-    })
-
-    
-  }, [])
-  
-  
+    gsap.to(".left", {
+      z: 0,
+      stagger: 0.1,
+      delay: 1,
+      opacity: 1,
+    });
+  }, []);
 
   return (
     <div className="bussiness-sign-up">
@@ -59,8 +55,17 @@ export default function BussinessSignup() {
         <h2>BookWare</h2>
       </div>
 
-      <div className="progress-bar">
-        
+      <div className="signup-progress-bar">
+        <div className="progress-bar">
+          <div className="progress-step1">
+            <FaCheckCircle  className="check-icon"/>
+            
+          </div>
+          <div className="progress-step2"><MdOutlineRadioButtonUnchecked className="current-step-icon"/>
+
+          </div>
+          <div className="progress-step3"></div>
+        </div>
       </div>
       <h2 className="prgress-bar-heading">Let's create your account</h2>
       <div className="form-container">
@@ -96,11 +101,12 @@ export default function BussinessSignup() {
           <div className="phone flex-col-class">
             <label className="input-label">Phone number</label>
             <div className="phone-input">
-              <div className="icons"><LiaFlagUsaSolid /></div>
+              <div className="icons">
+                <LiaFlagUsaSolid />
+              </div>
               <input className="input-style-sign-up" type="text" />
             </div>
           </div>
-
 
           <button className="continue-sign-up">Continue</button>
         </div>
